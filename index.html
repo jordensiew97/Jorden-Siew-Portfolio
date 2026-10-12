@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio, CV, resume, biodata dan maklumat interview Jorden Siew — Graphic Designer, Videographer dan Content Creator.">
   <title>Jorden Siew | Portfolio & Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{--gold:#b58a45;--ink:#171717;--muted:#6d6b67;--paper:#fbfaf7;--line:#e9e2d7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit} .site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px max(5vw,20px);background:rgba(251,250,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:900;letter-spacing:.04em}.brand small{display:block;font-size:10px;letter-spacing:.18em;color:var(--muted)}.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:var(--ink);color:#fff;border-radius:12px;font-size:17px}
+    nav{display:flex;align-items:center;gap:22px}nav a{text-decoration:none;font-size:13px;font-weight:700}nav a:hover{color:var(--gold)}.nav-cta{padding:10px 14px;border-radius:30px;background:var(--ink);color:white}.menu-toggle{display:none;background:none;border:0;font-size:25px}
+    .section{padding:78px max(6vw,22px);max-width:1400px;margin:auto}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:570px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.17em;color:var(--gold)}h1{font-size:clamp(42px,6vw,76px);line-height:1.03;letter-spacing:-.055em;margin:16px 0}h1 span{color:var(--gold)}h2{font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-.04em;margin:8px 0 18px}h3{line-height:1.25}.lead{font-size:18px;color:#555;max-width:640px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.button{display:inline-block;padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:800;font-size:13px;border:1px solid var(--ink);cursor:pointer}.primary{background:var(--ink);color:white}.secondary{background:transparent;color:var(--ink)}.hero-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:12px;color:var(--muted)}
+    .hero-art{min-height:330px;position:relative;border-radius:28px;background:linear-gradient(135deg,#e9d9be,#f8f2e8 50%,#d9c29b);overflow:hidden;padding:30px;display:flex;align-items:flex-end}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #b58a4580;border-radius:50%;width:330px;height:330px;right:-50px;top:-90px}.hero-art:after{width:230px;height:230px;right:0;top:-40px}.art-card{position:relative;z-index:1;background:#fffdf8;padding:24px;border-radius:18px;box-shadow:0 20px 50px #4e371b22;width:65%}.art-card span{font-size:10px;letter-spacing:.15em;color:var(--gold)}.art-card strong{display:block;font-size:30px;line-height:1.1;margin:16px 0}.card-two{position:absolute;right:20px;top:105px;width:43%;transform:rotate(5deg)}.card-two strong{font-size:23px}.art-sticker{position:absolute;right:18px;bottom:22px;background:var(--gold);color:#fff;border-radius:50%;width:90px;height:90px;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:900;transform:rotate(12deg)}
+    .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.intro-grid>p{font-size:18px;color:#555;align-self:center}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.section-heading>p{max-width:360px;color:var(--muted)}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.project{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px}.project-visual{height:300px;background:#eee;overflow:hidden}.project-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.project:hover .project-visual img{transform:scale(1.035)}.project-info{padding:22px}.project-info>span{font-size:10px;letter-spacing:.15em;color:var(--gold);font-weight:800}.project-info h3{margin:8px 0;font-size:22px}.project-info p{color:var(--muted);margin-bottom:0}.video-project video{width:100%;height:100%;object-fit:cover;background:#111}.note{font-size:12px;color:var(--muted);margin-top:18px}
+    .pdf-panel{margin-top:34px;border:1px dashed #c5a56f;border-radius:22px;padding:clamp(20px,4vw,34px);background:#fff}.pdf-panel h3{font-size:24px;margin:5px 0}.pdf-panel p{color:var(--muted)}.pdf-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0}.file-input{max-width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}.pdf-frame{width:100%;height:650px;border:1px solid var(--line);border-radius:12px;background:#f4f1eb;display:none}.pdf-status{font-size:13px;color:var(--muted)}
+    .skills-section{background:#f0e8dc;max-width:none;padding-left:max(6vw,22px);padding-right:max(6vw,22px)}.skills-section>.section-heading,.skills-section>.skill-columns{max-width:1200px;margin-left:auto;margin-right:auto}.skill-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill-box,.side-card,.education-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.skill-number{color:var(--gold);font-weight:900}.skill-box p,.side-card p{color:var(--muted)}.resume-layout{display:grid;grid-template-columns:1.6fr .8fr;gap:25px}.timeline{border-left:2px solid #e2cfad;padding-left:22px}.timeline article{position:relative;margin:0 0 25px}.timeline article:before{content:"";position:absolute;left:-29px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--gold)}.timeline-date{font-size:12px;color:var(--gold);font-weight:800}.muted{color:var(--muted)}.resume-side{display:grid;align-content:start;gap:14px}.education-card{margin:12px 0}.download-row{margin-top:28px;padding:22px;border-radius:16px;background:#f0e8dc}.doc-links{display:flex;flex-wrap:wrap;gap:12px}.doc-links a{font-weight:800;color:#78551f}
+    .bio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.bio-item{padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px}.bio-item span{display:block;color:var(--muted);font-size:12px}.bio-item strong{display:block;margin-top:4px}.privacy-note{font-size:12px;color:var(--muted)}.interview-panel{display:grid;grid-template-columns:1.3fr .7fr;gap:35px;background:var(--ink);color:white;border-radius:26px;padding:clamp(28px,5vw,55px)}.interview-panel .eyebrow{color:#d8b778}.interview-panel p{color:#ddd}.light{background:#fff;color:#111;border-color:#fff}.outline-light{color:#fff;border-color:#777}.interview-side{align-self:center;border-left:1px solid #555;padding-left:25px}.big-quote{font-size:70px;color:var(--gold);line-height:1}.interview-side>span:last-child{font-size:10px;letter-spacing:.14em;color:#cbb38c}.contact-section{text-align:center}.contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;max-width:800px;margin:28px auto}.contact-card{text-align:left;padding:22px;background:white;border:1px solid var(--line);border-radius:16px;text-decoration:none}.contact-card span,.contact-card small{display:block;color:var(--muted);font-size:11px}.contact-card strong{display:block;margin:10px 0;overflow-wrap:anywhere}footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px max(5vw,20px);border-top:1px solid var(--line);font-size:12px;color:var(--muted)}footer a{text-decoration:none}
+    @media(max-width:800px){.menu-toggle{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}nav.open{display:flex}.hero,.intro-grid,.resume-layout,.interview-panel{grid-template-columns:1fr}.hero{padding-top:48px}.hero-art{min-height:290px}.section{padding-top:55px;padding-bottom:55px}.portfolio-grid{grid-template-columns:1fr}.project-visual{height:260px}.skill-columns{grid-template-columns:1fr}.section-heading{display:block}.pdf-frame{height:480px}.interview-side{border-left:0;border-top:1px solid #555;padding:20px 0 0}.bio-grid,.contact-cards{grid-template-columns:1fr}footer{flex-wrap:wrap}}
+    @media print{.site-header,.hero-actions,.pdf-panel,.contact-section,footer{display:none!important}.section{padding:20px;break-inside:avoid}.project{break-inside:avoid}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -43,74 +58,36 @@
     <section class="section" id="portfolio">
       <div class="section-heading"><div><p class="eyebrow">HASIL KERJA & PERKHIDMATAN</p><h2>Portfolio kreatif</h2></div><p>Contoh kategori projek berdasarkan portfolio yang diberikan.</p></div>
       <div class="portfolio-grid">
-        <article class="project project-large">
-          <div class="project-visual visual-photo">
-            <span class="WhatsApp Unknown 2026-10-12 at 8.51.26 AM/WhatsApp Image 2026-10-12 at 8.51.09 AM (2).jpeg">PHOTO EDITING</span>
-            <div class="sun"></div><div class="mountain"></div>
-            <div class="mountain second"></div>
-            <div class="visual-caption">Shape the<br>moment.</div>
-          </div>
-          <div class="project-info"><span>01 / FOTOGRAFI</span>
-            <h3>Fotografi & Photo Editing</h3>
-            <p>Background removal, color grading, product retouching dan photo manipulation.</p>
-          </div>
+        <article class="project">
+          <div class="project-visual"><img src="assets/project-photo-editing.jpeg" alt="Contoh projek fotografi dan photo editing daripada portfolio"></div>
+          <div class="project-info"><span>01 / FOTOGRAFI</span><h3>Fotografi & Photo Editing</h3><p>Background removal, color grading, photo manipulation dan product retouching.</p></div>
         </article>
         <article class="project">
-          <div class="project-visual visual-video">
-            <div class="play">▶</div>
-            <span class="Oden_New_Multimedia_Portfolio_Promo_60s.mp4">VIDEO PRODUCTION</span>
-            <div class="video-bars"></div>
-          </div>
-          <div class="project-info">
-            <span>02 / VIDEO</span>
-            <h3>Video Editing & Motion Graphics</h3>
-            <p>Food review, video pendek, kandungan TikTok dan video promosi.</p>
-          </div>
+          <div class="project-visual video-project"><video controls preload="metadata" poster="assets/project-video-editing.jpeg"><source src="assets/portfolio-promo-60s.mp4" type="video/mp4">Pelayar anda tidak menyokong video.</video></div>
+          <div class="project-info"><span>02 / VIDEO</span><h3>Video Editing & Motion Graphics</h3><p>Food review, TikTok, video pendek dan video promosi. Tekan butang main untuk menonton video portfolio.</p></div>
         </article>
         <article class="project">
-          <div class="project-visual visual-menu">
-            <div class="menu-sheet">
-              <small>THE DAILY TABLE</small>
-              <b>GOOD FOOD.<br>GOOD MOOD.</b>
-              <span>MENU • FRESH • LOCAL</span></div>
-            </div>
-            <div class="project-info"><span>03 / CETAKAN</span>
-              <h3>Menu & Bahan Promosi</h3>
-              <p>Reka bentuk menu, banner, menu board dan artwork sedia untuk cetakan.</p>
-            </div>
-          </article>
-        <article class="project">
-          <div class="project-visual visual-social">
-            <div class="social-tile tile-a">MAKE<br>IT BOLD.</div>
-            <div class="social-tile tile-b">YOUR<br>BRAND</div>
-            <div class="social-tile tile-c">CREATE<br>MORE ↗</div>
-          </div>
-          <div class="project-info"><span>04 / DIGITAL</span>
-            <h3>Social Media Design</h3>
-            <p>Visual kempen, poster digital, kandungan media sosial dan promosi produk.</p>
-          </div>
+          <div class="project-visual"><img src="assets/project-social-media.jpeg" alt="Contoh projek social media content dan reka bentuk digital"></div>
+          <div class="project-info"><span>03 / KANDUNGAN DIGITAL</span><h3>Social Media Content</h3><p>Reka bentuk kandungan untuk TikTok, YouTube, Facebook, Instagram dan platform digital.</p></div>
         </article>
         <article class="project">
-          <div class="project-visual visual-shirt">
-            <div class="shirt-shape">
-              <span>CREATE<br>EVERY DAY</span>
-            </div>
-            <span class="visual-label">SUBLIMATION</span></div>
-            <div class="project-info"><span>05 / APPAREL</span>
-              <h3>T-Shirt Sublimation</h3>
-              <p>Artwork untuk sublimasi dengan output AI, PDF, SVG atau PNG.</p>
-            </div>
-          </article>
-        <article class="project">
-          <div class="project-visual visual-logo">
-            <div class="logo-ring">J<span>S</span>
-            </div><span class="visual-label">BRAND IDENTITY</span></div>
-            <div class="project-info"><span>06 / IDENTITI</span>
-              <h3>Logo Design</h3>
-              <p>Konsep logo dan visual identiti jenama untuk kegunaan digital dan cetakan.</p></div>
-            </article>
+          <div class="project-visual"><img src="assets/project-video-editing.jpeg" alt="Paparan proses penyuntingan video pada telefon pintar"></div>
+          <div class="project-info"><span>04 / PRODUKSI</span><h3>Proses Penyuntingan Video</h3><p>Contoh paparan proses suntingan, penyusunan klip, muzik dan sari kata.</p></div>
+        </article>
       </div>
-      <p class="note">Nota: Visual pada kad ini ialah ilustrasi contoh untuk susun atur laman web, bukan imej projek asal. Gantikan dengan imej sebenar daripada portfolio PDF sebelum diterbitkan.</p>
+      <p class="note">Imej dan video di atas dimasukkan daripada bahan yang dimuat naik. Untuk menggantikan bahan, tukar fail di dalam folder assets dengan nama fail yang sama.</p>
+      <div class="pdf-panel" id="pdfPortfolio">
+        <p class="eyebrow">RUANG KEMAS KINI DOKUMEN</p>
+        <h3>Portfolio PDF terkini</h3>
+        <p>Pilih fail PDF portfolio versi terkini daripada komputer anda untuk dipaparkan terus di sini. Fail yang dipilih hanya dipaparkan dalam pelayar ini dan tidak dimuat naik ke internet.</p>
+        <div class="pdf-actions">
+          <input class="file-input" type="file" id="portfolioPdfInput" accept="application/pdf,.pdf" aria-label="Pilih PDF portfolio terkini">
+          <button class="button secondary" type="button" id="clearPdf" disabled>Buang pratonton</button>
+          <a class="button primary" id="openPdf" href="#" target="_blank" rel="noopener" hidden>Buka PDF ↗</a>
+        </div>
+        <p class="pdf-status" id="pdfStatus" aria-live="polite">Belum ada PDF dipilih.</p>
+        <iframe class="pdf-frame" id="pdfPreview" title="Pratonton PDF portfolio terkini"></iframe>
+      </div>
     </section>
 
     <section class="section skills-section">
@@ -180,6 +157,16 @@
     </section>
   </main>
   <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">JS</span><span>JORDEN SIEW<small>CREATIVE PORTFOLIO</small></span></a><span>© <span id="year"></span> Jorden Siew. Hak cipta terpelihara.</span><a href="#home">Kembali ke atas ↑</a></footer>
-  <script src="script.js"></script>
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const navMenu=document.getElementById('navMenu');
+    if(menuToggle&&navMenu){menuToggle.addEventListener('click',()=>{const open=navMenu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});navMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navMenu.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}));}
+    const pdfInput=document.getElementById('portfolioPdfInput'),pdfPreview=document.getElementById('pdfPreview'),pdfStatus=document.getElementById('pdfStatus'),clearPdf=document.getElementById('clearPdf'),openPdf=document.getElementById('openPdf');
+    let pdfUrl=null;
+    function resetPdf(){if(pdfUrl){URL.revokeObjectURL(pdfUrl);pdfUrl=null;}pdfPreview.removeAttribute('src');pdfPreview.style.display='none';pdfStatus.textContent='Belum ada PDF dipilih.';clearPdf.disabled=true;openPdf.hidden=true;openPdf.removeAttribute('href');if(pdfInput)pdfInput.value='';}
+    if(pdfInput){pdfInput.addEventListener('change',()=>{const file=pdfInput.files&&pdfInput.files[0];if(!file)return;if(file.type!=='application/pdf'&&!file.name.toLowerCase().endsWith('.pdf')){resetPdf();pdfStatus.textContent='Sila pilih fail PDF yang sah.';return;}if(pdfUrl)URL.revokeObjectURL(pdfUrl);pdfUrl=URL.createObjectURL(file);pdfPreview.src=pdfUrl;pdfPreview.style.display='block';pdfStatus.textContent='Pratonton: '+file.name+' ('+(file.size/1024/1024).toFixed(2)+' MB).';clearPdf.disabled=false;openPdf.href=pdfUrl;openPdf.hidden=false;});}
+    if(clearPdf)clearPdf.addEventListener('click',resetPdf);
+    const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
