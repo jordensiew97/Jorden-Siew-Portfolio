@@ -77,16 +77,15 @@
       </div>
       <p class="note">Imej dan video di atas dimasukkan daripada bahan yang dimuat naik. Untuk menggantikan bahan, tukar fail di dalam folder assets dengan nama fail yang sama.</p>
       <div class="pdf-panel" id="pdfPortfolio">
-        <p class="eyebrow">RUANG KEMAS KINI DOKUMEN</p>
-        <h3>Portfolio PDF terkini</h3>
-        <p>Pilih fail PDF portfolio versi terkini daripada komputer anda untuk dipaparkan terus di sini. Fail yang dipilih hanya dipaparkan dalam pelayar ini dan tidak dimuat naik ke internet.</p>
+        <p class="eyebrow">UNTUK SEMAKAN PANEL INTERVIEW</p>
+        <h3>Portfolio Oden New Multimedia 2026</h3>
+        <p>Dokumen portfolio rasmi untuk rujukan dan semakan panel interview. Panel boleh menyemak semua 15 halaman terus di bawah atau membuka PDF dalam tab baharu.</p>
         <div class="pdf-actions">
-          <input class="file-input" type="file" id="portfolioPdfInput" accept="application/pdf,.pdf" aria-label="Pilih PDF portfolio terkini">
-          <button class="button secondary" type="button" id="clearPdf" disabled>Buang pratonton</button>
-          <a class="button primary" id="openPdf" href="#" target="_blank" rel="noopener" hidden>Buka PDF ↗</a>
+          <a class="button primary" href="assets/Portfolio_Oden_New_Multimedia_2026.pdf" target="_blank" rel="noopener">Buka PDF penuh ↗</a>
+          <a class="button secondary" href="assets/Portfolio_Oden_New_Multimedia_2026.pdf" download="Portfolio_Oden_New_Multimedia_2026.pdf">Muat turun PDF ↓</a>
         </div>
-        <p class="pdf-status" id="pdfStatus" aria-live="polite">Belum ada PDF dipilih.</p>
-        <iframe class="pdf-frame" id="pdfPreview" title="Pratonton PDF portfolio terkini"></iframe>
+        <p class="pdf-status">Dokumen disertakan bersama laman web. Untuk perkongsian dalam talian, muat naik keseluruhan folder laman web termasuk folder assets.</p>
+        <iframe class="pdf-frame" id="pdfPreview" title="Portfolio Oden New Multimedia 2026 untuk semakan panel interview" src="assets/Portfolio_Oden_New_Multimedia_2026.pdf#view=FitH" style="display:block" loading="lazy"></iframe>
       </div>
     </section>
 
@@ -121,7 +120,7 @@
           <div class="side-card"><h3>Minat</h3><p>Hiking · Running · Gym & Fitness · Fotografi · Videografi · Masakan nutrisi sihat · Content Creation</p></div>
         </aside>
       </div>
-      <div class="download-row"><p><strong>Dokumen asal:</strong> Buka portfolio, CV/resume dan sijil PDF yang anda sediakan.</p><div class="doc-links"><a href="Portfolio%20Oden%20New%20Multimedia%202026.pdf" target="_blank" rel="noopener">Portfolio PDF ↗</a><a href="Professional%20Cv%20Resume%20Jorden%20Siew.pdf" target="_blank" rel="noopener">CV & Resume PDF ↗</a><a href="Sijil%20resume%20oden.pdf" target="_blank" rel="noopener">Sijil PDF ↗</a></div></div>
+      <div class="download-row"><p><strong>Dokumen asal:</strong> Buka portfolio, CV/resume dan sijil PDF yang anda sediakan.</p><div class="doc-links"><a href="assets/Portfolio_Oden_New_Multimedia_2026.pdf" target="_blank" rel="noopener">Portfolio PDF ↗</a><a href="Professional%20Cv%20Resume%20Jorden%20Siew.pdf" target="_blank" rel="noopener">CV & Resume PDF ↗</a><a href="Sijil%20resume%20oden.pdf" target="_blank" rel="noopener">Sijil PDF ↗</a></div></div>
     </section>
 
     <section class="section bio-section" id="biodata">
@@ -161,11 +160,6 @@
     const menuToggle=document.getElementById('menuToggle');
     const navMenu=document.getElementById('navMenu');
     if(menuToggle&&navMenu){menuToggle.addEventListener('click',()=>{const open=navMenu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});navMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navMenu.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}));}
-    const pdfInput=document.getElementById('portfolioPdfInput'),pdfPreview=document.getElementById('pdfPreview'),pdfStatus=document.getElementById('pdfStatus'),clearPdf=document.getElementById('clearPdf'),openPdf=document.getElementById('openPdf');
-    let pdfUrl=null;
-    function resetPdf(){if(pdfUrl){URL.revokeObjectURL(pdfUrl);pdfUrl=null;}pdfPreview.removeAttribute('src');pdfPreview.style.display='none';pdfStatus.textContent='Belum ada PDF dipilih.';clearPdf.disabled=true;openPdf.hidden=true;openPdf.removeAttribute('href');if(pdfInput)pdfInput.value='';}
-    if(pdfInput){pdfInput.addEventListener('change',()=>{const file=pdfInput.files&&pdfInput.files[0];if(!file)return;if(file.type!=='application/pdf'&&!file.name.toLowerCase().endsWith('.pdf')){resetPdf();pdfStatus.textContent='Sila pilih fail PDF yang sah.';return;}if(pdfUrl)URL.revokeObjectURL(pdfUrl);pdfUrl=URL.createObjectURL(file);pdfPreview.src=pdfUrl;pdfPreview.style.display='block';pdfStatus.textContent='Pratonton: '+file.name+' ('+(file.size/1024/1024).toFixed(2)+' MB).';clearPdf.disabled=false;openPdf.href=pdfUrl;openPdf.hidden=false;});}
-    if(clearPdf)clearPdf.addEventListener('click',resetPdf);
     const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
   </script>
 </body>
