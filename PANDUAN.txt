@@ -2,13 +2,13 @@ PORTFOLIO HTML JORDEN SIEW — PANDUAN RINGKAS
 
 1. Ekstrak keseluruhan fail ZIP ke satu folder.
 2. Buka index.html menggunakan Chrome, Edge atau Firefox.
-3. Imej dan video portfolio dipautkan daripada folder assets. Jangan pindahkan index.html keluar daripada folder ini.
-4. Untuk memaparkan PDF terkini, pergi ke bahagian “Portfolio PDF terkini”, tekan Choose File/Pilih Fail dan pilih PDF daripada komputer.
-5. PDF dipaparkan secara setempat dalam pelayar sahaja. Ia tidak dimuat naik ke internet dan pilihan PDF tidak kekal selepas halaman ditutup atau dimuat semula.
-6. Untuk menerbitkan laman web kepada orang lain, muat naik keseluruhan folder bersama assets ke hosting web. Ruang pilih PDF ialah pratonton setempat; untuk membolehkan semua pelawat melihat PDF yang sama, letakkan PDF di hosting dan pautkannya dalam HTML.
+3. Imej, video dan PDF portfolio dipautkan daripada folder assets. Jangan pindahkan index.html keluar daripada folder ini.
+4. Bahagian “Portfolio Oden New Multimedia 2026” kini memaparkan PDF yang disediakan untuk semakan panel interview. Panel boleh membaca PDF terus di laman web, membuka PDF dalam tab baharu atau memuat turunnya.
+5. Jika laman web diterbitkan ke internet, muat naik keseluruhan folder termasuk folder assets supaya PDF dan media dapat dipaparkan kepada panel.
 
 Fail aset:
 - assets/project-photo-editing.jpeg
 - assets/project-video-editing.jpeg
 - assets/project-social-media.jpeg
 - assets/portfolio-promo-60s.mp4
+- assets/Portfolio_Oden_New_Multimedia_2026.pdf
